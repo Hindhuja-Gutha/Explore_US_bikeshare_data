@@ -177,10 +177,10 @@ def user_stats(df):
     start_time = time.time()
 
     # Display counts of user types
-    print('User Types : \n',df.groupby('User Type')['User Type'].count())
+    print('User Types : ',df.groupby('User Type')['User Type'].count())
 
     # Display counts of gender
-    print('Gender  : \n',df.groupby('Gender')['Gender'].count())
+    print('Gender  : ',df.groupby('Gender')['Gender'].count())
 
     # Display earliest, most recent, and most common year of birth
     print('Earliest birth Year',df['Birth Year'].min())
@@ -207,8 +207,8 @@ def print_filtered_data(df,line_no):
         else:
             print('\n Invalid Option. Try again')
             return print_filtered_data(df, line_no)
-        
-    
+
+
 def main():
     while True:
         city, month, day = get_filters()
